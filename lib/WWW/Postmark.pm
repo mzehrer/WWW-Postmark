@@ -242,6 +242,7 @@ sub send {
 	$msg->{Bcc} = $params{Bcc} if $params{bcc};
 	$msg->{Tag} = $params{tag} if $params{tag};
 	$msg->{ReplyTo} = $params{reply_to} if $params{reply_to};
+    $msg->{Attachments} = $params{attachments} if $params{attachments};
 
 	# create and send the request
 	my $res = $ua->request(
