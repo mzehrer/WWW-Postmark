@@ -159,6 +159,17 @@ so you can analyze statistics of your mail sendings through the Postmark service
 Will force recipients of your email to send their replies to this mail
 address when replying to your email.
 
+=item * attachments
+
+Array of file attachments. Each one containing a name, Base64 encoded content and a 
+content type.
+
+	{
+        Name        => 'README.txt',
+        Content     => encode_base64($somecontent),
+        ContentType => 'text/text'
+    }
+
 =back
 
 =cut
